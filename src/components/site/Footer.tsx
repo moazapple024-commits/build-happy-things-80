@@ -76,13 +76,20 @@ export function Footer() {
       <p className="mx-auto mt-6 max-w-7xl text-center text-xs tracking-[0.2em] text-muted-foreground">
         © {new Date().getFullYear()} TOBIZE INTERCONTINENTAL · DOHA
       </p>
-      <p className="mx-auto mt-3 max-w-7xl text-center text-[10px] tracking-[0.15em] text-muted-foreground/70">
+      <p className="mx-auto mt-3 flex max-w-7xl flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-[11px] tracking-[0.12em] text-muted-foreground/80">
+        <span>Website developed by</span>
         <a
-          href="tel:+963994929619"
-          className="transition-colors hover:text-gold"
+          href="https://wa.me/963994929619"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-foreground underline decoration-gold/60 decoration-1 underline-offset-4 transition-colors hover:text-gold"
         >
-          Website developed by Moaz · +963 994929619
+          Moaz
         </a>
+        <span className="text-muted-foreground/50">·</span>
+        <span className="font-display text-sm italic tracking-wide text-gold">
+          Tobize Intercontinental
+        </span>
       </p>
     </footer>
   );
