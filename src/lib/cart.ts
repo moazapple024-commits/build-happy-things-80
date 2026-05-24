@@ -15,7 +15,10 @@ export type MenuItem = {
   price: number; // QAR
   image: string;
   category: MenuCategory;
+  category: MenuCategory;
 };
+
+export type RawMenuItem = Omit<MenuItem, "category"> & { category?: MenuCategory };
 
 export type CartLine = { id: string; qty: number };
 
