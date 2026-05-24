@@ -1,24 +1,12 @@
 import { useSyncExternalStore } from "react";
 
-export type MenuCategory =
-  | "mains"
-  | "rice"
-  | "african"
-  | "salads"
-  | "desserts"
-  | "drinks";
-
 export type MenuItem = {
   id: string;
   name: string;
   desc: string;
   price: number; // QAR
   image: string;
-  category: MenuCategory;
-  category: MenuCategory;
 };
-
-export type RawMenuItem = Omit<MenuItem, "category"> & { category?: MenuCategory };
 
 export type CartLine = { id: string; qty: number };
 
