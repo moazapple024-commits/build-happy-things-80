@@ -38,9 +38,29 @@ import calamariShrimp from "@/assets/meal-calamari-shrimp.jpg";
 import beefBurgerNew from "@/assets/meal-beef-burger-new.jpg";
 import lambKofta from "@/assets/meal-lamb-kofta.jpg";
 import okraSoup from "@/assets/meal-okra-soup.jpg";
+import vegetableSoup from "@/assets/meal-vegetable-soup.jpg";
+import friedRiceChicken from "@/assets/meal-fried-rice-chicken.jpg";
+import noodlesEgg from "@/assets/meal-noodles-egg.jpg";
+import tilapiaGrill from "@/assets/meal-tilapia-grill.jpg";
+import whiteSpaghetti from "@/assets/meal-white-spaghetti.jpg";
+import jollofGoat from "@/assets/meal-jollof-goat.jpg";
+import grillCatfish from "@/assets/meal-grill-catfish.jpg";
+import meatPie from "@/assets/meal-meat-pie.jpg";
+import parfait from "@/assets/meal-parfait.jpg";
+import zobo from "@/assets/meal-zobo.jpg";
 import type { MenuItem } from "./cart";
 
 export const MENU: MenuItem[] = [
+  { id: "grill-catfish", name: "Grill Catfish", desc: "Whole grilled catfish smothered in spicy pepper sauce with fried plantain", price: 100, image: grillCatfish },
+  { id: "tilapia-grill", name: "Tilapia Grill", desc: "Charcoal-grilled tilapia with chili glaze, crispy fries and dipping sauces", price: 100, image: tilapiaGrill },
+  { id: "jollof-goat", name: "Jollof & Goat Meat", desc: "Smoky jollof rice served with tender peppered goat meat", price: 70, image: jollofGoat },
+  { id: "vegetable-soup", name: "Vegetable Soup", desc: "Rich Nigerian vegetable soup with assorted meat and fish", price: 50, image: vegetableSoup },
+  { id: "fried-rice-chicken", name: "Fried Rice & Chicken", desc: "Wok-tossed fried rice with mixed vegetables and grilled chicken", price: 50, image: friedRiceChicken },
+  { id: "noodles", name: "Noodles", desc: "Stir-fried noodles with vegetables, omelette and fried plantain", price: 50, image: noodlesEgg },
+  { id: "white-spaghetti", name: "White Spaghetti", desc: "Buttery white spaghetti served with spicy peppered chicken stew", price: 45, image: whiteSpaghetti },
+  { id: "parfait", name: "Parfait", desc: "Creamy yogurt parfait layered with strawberries, kiwi, banana and blueberries", price: 35, image: parfait },
+  { id: "meat-pie", name: "Meat Pie", desc: "Golden flaky pastry filled with seasoned minced meat and potatoes", price: 10, image: meatPie },
+  { id: "zobo-drink", name: "Zobo Drink", desc: "Chilled hibiscus drink infused with ginger and pineapple", price: 10, image: zobo },
   { id: "lamb-kofta-plate", name: "Lamb Kofta Plate", desc: "Spiced lamb kofta meatballs with saffron rice, hummus, salad and warm pita", price: 60, image: lambKofta },
   { id: "okra-soup", name: "Okra Soup", desc: "Rich West-African okra soup with assorted meat and seafood", price: 50, image: okraSoup },
   { id: "calamari-shrimp", name: "Calamari & Shrimp", desc: "Crispy fried calamari and shrimp with marinara dipping sauce", price: 35, image: calamariShrimp },
