@@ -93,9 +93,15 @@ import isiewu from "@/assets/meal-isiewu.jpg";
 import spriteCan from "@/assets/meal-sprite.jpg";
 import fantaCan from "@/assets/meal-fanta.jpg";
 import cokeCan from "@/assets/meal-coke.jpg";
+import friedPlantain from "@/assets/meal-fried-plantain.jpg";
+import chocolateShake from "@/assets/meal-chocolate-shake.jpg";
+import strawberryShake from "@/assets/meal-strawberry-shake.jpg";
 import type { MenuItem } from "./cart";
 
 export const MENU: MenuItem[] = [
+  { id: "fried-plantain", name: "Fried Plantain (Dodo)", desc: "Golden ripe plantain slices, pan-fried until sweet and caramelized", price: 15, image: friedPlantain },
+  { id: "chocolate-milkshake", name: "Chocolate Milkshake", desc: "Rich chocolate milkshake topped with whipped cream and sprinkles", price: 15, image: chocolateShake },
+  { id: "strawberry-milkshake", name: "Strawberry Milkshake", desc: "Creamy strawberry milkshake topped with whipped cream and fresh berries", price: 15, image: strawberryShake },
   { id: "ugali-beef-stew", name: "Ugali & Beef Stew", desc: "East-African ugali served with rich beef stew and sautéed greens", price: 45, image: ugaliBeefStew },
   { id: "githeri-ugali", name: "Githeri & Ugali", desc: "Kenyan maize and beans stew served with soft ugali", price: 45, image: githeriUgali },
   { id: "yam-porridge", name: "Yam Porridge (Asaro)", desc: "Soft yam simmered with peppers, palm oil and leafy greens", price: 50, image: yamPorridge },
@@ -305,6 +311,7 @@ const CATEGORY_BY_ID: Record<string, MenuCategory> = {
   "3-beans-salad": "salads",
   coleslaw: "salads",
   "roasted-plantain": "salads",
+  "fried-plantain": "salads",
 
   // Desserts
   tiramisu: "desserts",
@@ -325,6 +332,8 @@ const CATEGORY_BY_ID: Record<string, MenuCategory> = {
   "sprite-can": "drinks",
   "fanta-can": "drinks",
   "coke-can": "drinks",
+  "chocolate-milkshake": "drinks",
+  "strawberry-milkshake": "drinks",
 };
 
 export function categoryOf(id: string): MenuCategory {
