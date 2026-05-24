@@ -53,7 +53,7 @@ export function Footer() {
                 Facebook
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/official_tobize_restaurant"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gold transition-colors"
@@ -61,7 +61,7 @@ export function Footer() {
                 Instagram
               </a>
               <a
-                href="https://www.tiktok.com/"
+                href="https://www.tiktok.com/@tobize.interconti"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gold transition-colors"
