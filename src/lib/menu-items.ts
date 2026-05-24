@@ -83,9 +83,29 @@ import moiMoi from "@/assets/meal-moi-moi.jpg";
 import chickenPepperSoup from "@/assets/meal-chicken-pepper-soup.jpg";
 import seafoodFriedRice from "@/assets/meal-seafood-fried-rice.jpg";
 import ugaliNyamachoma from "@/assets/meal-ugali-nyamachoma.jpg";
+import ugaliBeefStew from "@/assets/meal-ugali-beef-stew.jpg";
+import githeriUgali from "@/assets/meal-githeri-ugali.jpg";
+import yamPorridge from "@/assets/meal-yam-porridge.jpg";
+import asunGoat from "@/assets/meal-asun-goat.jpg";
+import coconutRice from "@/assets/meal-coconut-rice.jpg";
+import whiteRiceBeansPlantain from "@/assets/meal-white-rice-beans-plantain.jpg";
+import isiewu from "@/assets/meal-isiewu.jpg";
+import spriteCan from "@/assets/meal-sprite.jpg";
+import fantaCan from "@/assets/meal-fanta.jpg";
+import cokeCan from "@/assets/meal-coke.jpg";
 import type { MenuItem } from "./cart";
 
 export const MENU: MenuItem[] = [
+  { id: "ugali-beef-stew", name: "Ugali & Beef Stew", desc: "East-African ugali served with rich beef stew and sautéed greens", price: 45, image: ugaliBeefStew },
+  { id: "githeri-ugali", name: "Githeri & Ugali", desc: "Kenyan maize and beans stew served with soft ugali", price: 45, image: githeriUgali },
+  { id: "yam-porridge", name: "Yam Porridge (Asaro)", desc: "Soft yam simmered with peppers, palm oil and leafy greens", price: 50, image: yamPorridge },
+  { id: "asun-goat", name: "Asun (Spicy Goat Meat)", desc: "Smoky grilled goat meat tossed in fiery pepper and onion sauce", price: 80, image: asunGoat },
+  { id: "coconut-rice", name: "Coconut Rice", desc: "Fragrant rice cooked in coconut milk with mixed peppers", price: 45, image: coconutRice },
+  { id: "white-rice-beans-plantain", name: "White Rice, Beans, Beef Stew & Plantain", desc: "Generous platter of white rice, beans, peppered beef stew and fried plantain", price: 90, image: whiteRiceBeansPlantain },
+  { id: "isiewu", name: "Isiewu (Goat Head Pepper)", desc: "Traditional Igbo spicy goat head delicacy with utazi and onions", price: 100, image: isiewu },
+  { id: "sprite-can", name: "Sprite Can 330ml", desc: "Chilled Sprite soft drink — 330ml can", price: 5, image: spriteCan },
+  { id: "fanta-can", name: "Fanta Can 330ml", desc: "Chilled Fanta orange soft drink — 330ml can", price: 5, image: fantaCan },
+  { id: "coke-can", name: "Coca-Cola Can 330ml", desc: "Chilled Coca-Cola — 330ml can", price: 5, image: cokeCan },
   { id: "seafood-fried-rice", name: "Seafood Fried Rice", desc: "Wok-tossed fried rice with prawns and seafood, peppers and herbs", price: 70, image: seafoodFriedRice },
   { id: "fried-beef", name: "Fried Beef", desc: "Tender chunks of seasoned beef, slow-fried until rich and smoky", price: 30, image: friedBeef },
   { id: "fried-fish", name: "Fried Fish", desc: "Crispy golden fried fish steaks with spicy seasoning", price: 30, image: friedFish },
@@ -240,9 +260,16 @@ const CATEGORY_BY_ID: Record<string, MenuCategory> = {
   sandwiches: "rice",
   "meat-pie": "rice",
   "small-chops": "rice",
+  "coconut-rice": "rice",
+  "white-rice-beans-plantain": "rice",
 
   // African specials
   "ugali-nyamachoma": "african",
+  "ugali-beef-stew": "african",
+  "githeri-ugali": "african",
+  "yam-porridge": "african",
+  "asun-goat": "african",
+  isiewu: "african",
   "cow-skin": "african",
   "cowleg-pepper-soup": "african",
   "chicken-pepper-soup": "african",
@@ -295,6 +322,9 @@ const CATEGORY_BY_ID: Record<string, MenuCategory> = {
   "vanilla-milkshake": "drinks",
   "zobo-drink": "drinks",
   "strawberry-mojito": "drinks",
+  "sprite-can": "drinks",
+  "fanta-can": "drinks",
+  "coke-can": "drinks",
 };
 
 export function categoryOf(id: string): MenuCategory {
