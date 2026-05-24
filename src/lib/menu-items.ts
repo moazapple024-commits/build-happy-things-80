@@ -79,6 +79,14 @@ import ugaliNyamachoma from "@/assets/meal-ugali-nyamachoma.jpg";
 import type { MenuItem } from "./cart";
 
 export const MENU: MenuItem[] = [
+  { id: "ugali-nyamachoma", name: "Ugali / Nyamachoma / Kachumbari", desc: "East-African grilled meat with ugali and fresh kachumbari salad", price: 50, image: ugaliNyamachoma },
+  { id: "amala", name: "Amala", desc: "Smooth yam-flour swallow — soft, earthy and perfect with any soup", price: 20, image: amala },
+  { id: "semovita", name: "Semovita", desc: "Soft semolina swallow, smooth and fluffy — pairs with any Nigerian soup", price: 20, image: semovita },
+  { id: "garri-eba", name: "Garri (Eba)", desc: "Classic cassava eba swallow — firm, smooth and ready for any soup", price: 20, image: garriEba },
+  { id: "fufu", name: "Fufu", desc: "Soft cassava fufu swallow — light and stretchy, served with soup", price: 20, image: fufu },
+  { id: "pounded-yam", name: "Pounded Yam", desc: "Silky pounded yam swallow — smooth, stretchy and perfect with egusi or vegetable soup", price: 20, image: poundedYam },
+  { id: "agidi-eko", name: "Agidi / Eko", desc: "Firm corn-starch pudding wrapped in leaves — pairs with stew or pepper soup", price: 20, image: agidi },
+  { id: "wheat", name: "Wheat Swallow", desc: "Wholesome wheat swallow — smooth and filling, great with any soup", price: 15, image: wheat },
   { id: "small-chops", name: "Small Chops Platter", desc: "Party platter of puff-puff, suya, samosa, spring rolls, chicken and plantain", price: 500, image: smallChops },
   { id: "fruits-salad", name: "Fruits Salad Platter", desc: "Generous platter of fresh seasonal fruits — watermelon, pineapple, grapes and more", price: 150, image: fruitsSalad },
   { id: "vegetable-garri-beef", name: "Vegetable / Garri / Beef", desc: "Sautéed Nigerian vegetable with tender beef, served with eba (garri)", price: 60, image: vegetableGarriBeef },
