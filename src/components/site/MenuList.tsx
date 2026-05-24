@@ -1,4 +1,5 @@
 import { memo, useSyncExternalStore, useCallback } from "react";
+import { motion } from "motion/react";
 import { Plus, Minus, Flame, Utensils, Leaf, Salad, IceCream, GlassWater } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { MENU, MENU_BY_CATEGORY, CATEGORY_ORDER, CATEGORY_META, type MenuCategory } from "@/lib/menu-items";
