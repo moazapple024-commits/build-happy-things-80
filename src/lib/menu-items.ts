@@ -156,7 +156,7 @@ export const MENU: MenuItem[] = [
   { id: "shish-tawook", name: "Shish Tawook", desc: "Marinated chicken cubes grilled with rice, fries and salad", price: 25, image: shishTawook },
   { id: "spaghetti", name: "Spaghetti Pomodoro", desc: "Classic Italian spaghetti in fresh tomato & basil sauce", price: 25, image: spaghetti },
   { id: "majboos-lamb", name: "Majboos & Lamb", desc: "Qatari spiced rice topped with slow-cooked tender lamb", price: 30, image: majboosLamb },
-  { id: "mukimo", name: "Mukimo", desc: "Kenyan mashed greens, potatoes and beans with savoury stew", price: 25, image: mukimo },
+  { id: "mukimo", name: "Mukimo", desc: "Kenyan mashed greens, potatoes and beans with savoury stew", price: 40, image: mukimo },
   { id: "vermicelli-chicken", name: "Vermicelli Rice & Chicken", desc: "Toasted vermicelli rice with seasoned chicken strips and vegetables", price: 20, image: vermicelliRice },
   { id: "tabbouleh", name: "Tabbouleh Salad", desc: "Fresh parsley, bulgur, tomato and lemon-olive oil dressing", price: 20, image: tabbouleh },
   { id: "fattoush", name: "Fattoush Salad", desc: "Crisp greens, sumac dressing and toasted pita chips", price: 15, image: fattoush },
