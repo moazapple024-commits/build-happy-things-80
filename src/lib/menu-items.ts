@@ -58,9 +58,29 @@ import assortedPepperSoup from "@/assets/meal-assorted-pepper-soup.jpg";
 import catfishPepperSoup from "@/assets/meal-catfish-pepper-soup.jpg";
 import bangaGari from "@/assets/meal-banga-gari.jpg";
 import caesarChicken from "@/assets/meal-caesar-chicken.jpg";
+import cremeBrulee from "@/assets/meal-creme-brulee.jpg";
+import egusiEba from "@/assets/meal-egusi-eba.jpg";
+import smallChops from "@/assets/meal-small-chops.jpg";
+import vegetableGarriBeef from "@/assets/meal-vegetable-garri-beef.jpg";
+import whiteSoup from "@/assets/meal-white-soup.jpg";
+import bitterleafSoup from "@/assets/meal-bitterleaf-soup.jpg";
+import garriParfait from "@/assets/meal-garri-parfait.jpg";
+import fruitsSalad from "@/assets/meal-fruits-salad.jpg";
+import coleslaw from "@/assets/meal-coleslaw.jpg";
+import roastedPlantain from "@/assets/meal-roasted-plantain.jpg";
 import type { MenuItem } from "./cart";
 
 export const MENU: MenuItem[] = [
+  { id: "small-chops", name: "Small Chops Platter", desc: "Party platter of puff-puff, suya, samosa, spring rolls, chicken and plantain", price: 500, image: smallChops },
+  { id: "fruits-salad", name: "Fruits Salad Platter", desc: "Generous platter of fresh seasonal fruits — watermelon, pineapple, grapes and more", price: 150, image: fruitsSalad },
+  { id: "vegetable-garri-beef", name: "Vegetable / Garri / Beef", desc: "Sautéed Nigerian vegetable with tender beef, served with eba (garri)", price: 60, image: vegetableGarriBeef },
+  { id: "egusi-beef-eba", name: "Egusi & Beef with Eba", desc: "Rich melon-seed egusi soup with tender beef and smooth eba", price: 50, image: egusiEba },
+  { id: "garri-parfait", name: "Garri Parfait", desc: "Chilled garri layered with milk, strawberries, coconut and groundnuts", price: 50, image: garriParfait },
+  { id: "white-soup", name: "White Soup (Nsala)", desc: "Light, aromatic white soup with assorted meat and utazi leaves", price: 40, image: whiteSoup },
+  { id: "bitterleaf-soup", name: "Bitterleaf Soup", desc: "Traditional ofe onugbu with assorted meat in rich palm-oil broth", price: 40, image: bitterleafSoup },
+  { id: "creme-brulee", name: "Crème Brûlée", desc: "Silky vanilla custard topped with a torched caramelized sugar crust", price: 30, image: cremeBrulee },
+  { id: "coleslaw", name: "Coleslaw", desc: "Crunchy cabbage, carrot and red cabbage tossed in creamy dressing", price: 20, image: coleslaw },
+  { id: "roasted-plantain", name: "Roasted Plantain (per piece)", desc: "Fire-roasted ripe plantain — sweet, smoky and tender", price: 20, image: roastedPlantain },
   { id: "roasted-plantain-fish", name: "Roasted Plantain with Fish", desc: "Roasted ripe plantain served with grilled fish and spicy pepper sauce", price: 80, image: roastedPlantainFish },
   { id: "banga-gari", name: "Banga Soup & Gari", desc: "Rich palm-nut banga soup served with smooth eba (gari)", price: 70, image: bangaGari },
   { id: "abacha", name: "Abacha (African Salad)", desc: "Igbo shredded cassava salad with greens, onions and spicy palm oil sauce", price: 50, image: abacha },
