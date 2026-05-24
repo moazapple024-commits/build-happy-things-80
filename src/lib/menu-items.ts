@@ -211,6 +211,8 @@ const CATEGORY_BY_ID: Record<string, MenuCategory> = {
   "beef-burger-new": "mains",
   burger: "mains",
   "calamari-shrimp": "mains",
+  "fried-beef": "mains",
+  "fried-fish": "mains",
   "tilapia-grill": "mains",
   "grill-catfish": "mains",
   "roasted-plantain-fish": "mains",
@@ -226,6 +228,7 @@ const CATEGORY_BY_ID: Record<string, MenuCategory> = {
 
   // Rice & signature
   "majboos-lamb": "rice",
+  "seafood-fried-rice": "rice",
   "chicken-biryani": "rice",
   jollof: "rice",
   "jollof-goat": "rice",
@@ -240,6 +243,10 @@ const CATEGORY_BY_ID: Record<string, MenuCategory> = {
 
   // African specials
   "ugali-nyamachoma": "african",
+  "cow-skin": "african",
+  "cowleg-pepper-soup": "african",
+  "chicken-pepper-soup": "african",
+  "moi-moi": "african",
   mukimo: "african",
   "fufu-egusi": "african",
   "egusi-beef-eba": "african",
