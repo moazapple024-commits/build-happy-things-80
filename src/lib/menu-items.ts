@@ -28,9 +28,29 @@ import vermicelliRice from "@/assets/meal-vermicelli-rice.jpg";
 import tabbouleh from "@/assets/meal-tabbouleh.jpg";
 import greenSalad from "@/assets/meal-green-salad.jpg";
 import fattoush from "@/assets/meal-fattoush.jpg";
+import threeBeansSalad from "@/assets/meal-3-beans-salad.jpg";
+import pizza from "@/assets/meal-pizza.jpg";
+import penneArrabiata from "@/assets/meal-penne-arrabiata.jpg";
+import lasagna from "@/assets/meal-lasagna.jpg";
+import penneAlfredo from "@/assets/meal-penne-alfredo.jpg";
+import vanillaShake from "@/assets/meal-vanilla-shake.jpg";
+import calamariShrimp from "@/assets/meal-calamari-shrimp.jpg";
+import beefBurgerNew from "@/assets/meal-beef-burger-new.jpg";
+import lambKofta from "@/assets/meal-lamb-kofta.jpg";
+import okraSoup from "@/assets/meal-okra-soup.jpg";
 import type { MenuItem } from "./cart";
 
 export const MENU: MenuItem[] = [
+  { id: "lamb-kofta-plate", name: "Lamb Kofta Plate", desc: "Spiced lamb kofta meatballs with saffron rice, hummus, salad and warm pita", price: 60, image: lambKofta },
+  { id: "okra-soup", name: "Okra Soup", desc: "Rich West-African okra soup with assorted meat and seafood", price: 50, image: okraSoup },
+  { id: "calamari-shrimp", name: "Calamari & Shrimp", desc: "Crispy fried calamari and shrimp with marinara dipping sauce", price: 35, image: calamariShrimp },
+  { id: "pizza", name: "Chicken Pizza", desc: "Wood-fired pizza with chicken, peppers, onions and mozzarella", price: 30, image: pizza },
+  { id: "lasagna", name: "Beef Lasagna", desc: "Classic layered lasagna with rich meat ragu, béchamel and mozzarella", price: 30, image: lasagna },
+  { id: "penne-alfredo", name: "Penne Alfredo", desc: "Penne pasta in a creamy parmesan alfredo sauce with parsley", price: 30, image: penneAlfredo },
+  { id: "beef-burger-new", name: "Classic Beef Burger", desc: "Grilled beef patty with bacon, cheddar, lettuce and pickles in a brioche bun", price: 30, image: beefBurgerNew },
+  { id: "penne-arrabiata", name: "Penne Arrabiata", desc: "Penne pasta in a spicy tomato, chili and garlic sauce", price: 25, image: penneArrabiata },
+  { id: "3-beans-salad", name: "3 Beans Salad", desc: "Kidney, black and cannellini beans tossed with celery, onion and parsley", price: 15, image: threeBeansSalad },
+  { id: "vanilla-milkshake", name: "Vanilla Milkshake", desc: "Creamy vanilla milkshake topped with whipped cream and a cherry", price: 15, image: vanillaShake },
   { id: "lamb-chop", name: "Lamb Chop", desc: "Grilled lamb chops served on a bed of fragrant yellow rice", price: 75, image: lambChop },
   { id: "lamb-kebab", name: "Lamb Kebab", desc: "Char-grilled lamb skewers with peppers, onions and basmati rice", price: 50, image: lambKebab },
   { id: "fufu-egusi", name: "Fufu / Egusi / Beef", desc: "Traditional fufu with rich egusi soup and tender beef", price: 45, image: fufuEgusi },
