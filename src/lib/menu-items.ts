@@ -48,9 +48,29 @@ import grillCatfish from "@/assets/meal-grill-catfish.jpg";
 import meatPie from "@/assets/meal-meat-pie.jpg";
 import parfait from "@/assets/meal-parfait.jpg";
 import zobo from "@/assets/meal-zobo.jpg";
+import strawberryMojito from "@/assets/meal-strawberry-mojito.jpg";
+import suya from "@/assets/meal-suya.jpg";
+import abacha from "@/assets/meal-abacha.jpg";
+import nkwobi from "@/assets/meal-nkwobi.jpg";
+import roastedPlantainFish from "@/assets/meal-roasted-plantain-fish.jpg";
+import goatPepperSoup from "@/assets/meal-goat-pepper-soup.jpg";
+import assortedPepperSoup from "@/assets/meal-assorted-pepper-soup.jpg";
+import catfishPepperSoup from "@/assets/meal-catfish-pepper-soup.jpg";
+import bangaGari from "@/assets/meal-banga-gari.jpg";
+import caesarChicken from "@/assets/meal-caesar-chicken.jpg";
 import type { MenuItem } from "./cart";
 
 export const MENU: MenuItem[] = [
+  { id: "roasted-plantain-fish", name: "Roasted Plantain with Fish", desc: "Roasted ripe plantain served with grilled fish and spicy pepper sauce", price: 80, image: roastedPlantainFish },
+  { id: "banga-gari", name: "Banga Soup & Gari", desc: "Rich palm-nut banga soup served with smooth eba (gari)", price: 70, image: bangaGari },
+  { id: "abacha", name: "Abacha (African Salad)", desc: "Igbo shredded cassava salad with greens, onions and spicy palm oil sauce", price: 50, image: abacha },
+  { id: "nkwobi", name: "Nkwobi", desc: "Spicy cow-foot delicacy in rich palm-oil sauce with onions and utazi", price: 50, image: nkwobi },
+  { id: "goat-pepper-soup", name: "Goat Meat Pepper Soup", desc: "Aromatic peppery broth with tender goat meat and traditional spices", price: 50, image: goatPepperSoup },
+  { id: "catfish-pepper-soup", name: "Catfish Pepper Soup", desc: "Fresh catfish simmered in spicy herbed pepper-soup broth", price: 50, image: catfishPepperSoup },
+  { id: "assorted-pepper-soup", name: "Assorted Pepper Soup", desc: "Assorted meats and offal in a rich, spicy pepper-soup broth", price: 40, image: assortedPepperSoup },
+  { id: "caesar-chicken", name: "Caesar Salad with Chicken", desc: "Crisp romaine, parmesan and croutons with grilled chicken and Caesar dressing", price: 40, image: caesarChicken },
+  { id: "suya", name: "Suya", desc: "Spicy grilled beef skewers crusted with peanut yaji and fresh onions", price: 30, image: suya },
+  { id: "strawberry-mojito", name: "Strawberry Mojito", desc: "Refreshing strawberry mocktail with mint, lime and crushed ice", price: 10, image: strawberryMojito },
   { id: "grill-catfish", name: "Grill Catfish", desc: "Whole grilled catfish smothered in spicy pepper sauce with fried plantain", price: 100, image: grillCatfish },
   { id: "tilapia-grill", name: "Tilapia Grill", desc: "Charcoal-grilled tilapia with chili glaze, crispy fries and dipping sauces", price: 100, image: tilapiaGrill },
   { id: "jollof-goat", name: "Jollof & Goat Meat", desc: "Smoky jollof rice served with tender peppered goat meat", price: 70, image: jollofGoat },
