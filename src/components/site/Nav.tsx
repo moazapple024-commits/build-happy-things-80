@@ -56,7 +56,7 @@ export function Nav() {
         </button>
       </nav>
       {open && (
-        <div className="border-t border-border bg-background/95 backdrop-blur-xl md:hidden">
+        <div className="border-t border-border bg-background md:hidden">
           <ul className="flex flex-col px-6 py-6">
             {links.map((l) => (
               <li key={l.href} className="py-3 border-b border-border/40 last:border-0">
