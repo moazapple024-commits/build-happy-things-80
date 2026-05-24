@@ -12,6 +12,7 @@ export type CartLine = { id: string; qty: number };
 
 const KEY = "tobize_cart_v1";
 const listeners = new Set<() => void>();
+const EMPTY_CART: CartLine[] = [];
 let state: CartLine[] = load();
 
 function load(): CartLine[] {
@@ -31,16 +32,17 @@ function save() {
 
 export const cart = {
   add(id: string) {
-    const l = state.find((x) => x.id === id);
-    if (l) l.qty += 1;
-    else state = [...state, { id, qty: 1 }];
+    const exists = state.some((x) => x.id === id);
+    state = exists
+      ? state.map((x) => (x.id === id ? { ...x, qty: x.qty + 1 } : x))
+      : [...state, { id, qty: 1 }];
     save();
   },
   dec(id: string) {
-    const l = state.find((x) => x.id === id);
-    if (!l) return;
-    l.qty -= 1;
-    state = state.filter((x) => x.qty > 0);
+    if (!state.some((x) => x.id === id)) return;
+    state = state
+      .map((x) => (x.id === id ? { ...x, qty: x.qty - 1 } : x))
+      .filter((x) => x.qty > 0);
     save();
   },
   remove(id: string) {
@@ -64,7 +66,7 @@ export function useCart() {
   return useSyncExternalStore(
     cart.subscribe,
     cart.get,
-    () => [] as CartLine[],
+    () => EMPTY_CART,
   );
 }
 

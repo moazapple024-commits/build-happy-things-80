@@ -116,6 +116,12 @@
     background-size: 4px 4px;
     pointer-events: none;
   }
+  .menu-row-reveal {
+    content-visibility: auto;
+    contain: layout paint style;
+    contain-intrinsic-size: 132px;
+    animation: menu-row-fade 0.45s ease-out both;
+  }
 }
 
 @keyframes float-slow {
@@ -133,4 +139,17 @@
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
+}
+
+@keyframes menu-row-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-fade-up,
+  .menu-row-reveal {
+    animation: none;
+  }
 }
