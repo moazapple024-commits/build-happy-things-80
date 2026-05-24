@@ -75,10 +75,24 @@ import fufu from "@/assets/meal-fufu.jpg";
 import poundedYam from "@/assets/meal-pounded-yam.jpg";
 import agidi from "@/assets/meal-agidi.jpg";
 import wheat from "@/assets/meal-wheat.jpg";
+import friedBeef from "@/assets/meal-fried-beef.jpg";
+import friedFish from "@/assets/meal-fried-fish.jpg";
+import cowSkin from "@/assets/meal-cow-skin.jpg";
+import cowlegPepperSoup from "@/assets/meal-cowleg-pepper-soup.jpg";
+import moiMoi from "@/assets/meal-moi-moi.jpg";
+import chickenPepperSoup from "@/assets/meal-chicken-pepper-soup.jpg";
+import seafoodFriedRice from "@/assets/meal-seafood-fried-rice.jpg";
 import ugaliNyamachoma from "@/assets/meal-ugali-nyamachoma.jpg";
 import type { MenuItem } from "./cart";
 
 export const MENU: MenuItem[] = [
+  { id: "seafood-fried-rice", name: "Seafood Fried Rice", desc: "Wok-tossed fried rice with prawns and seafood, peppers and herbs", price: 70, image: seafoodFriedRice },
+  { id: "fried-beef", name: "Fried Beef", desc: "Tender chunks of seasoned beef, slow-fried until rich and smoky", price: 30, image: friedBeef },
+  { id: "fried-fish", name: "Fried Fish", desc: "Crispy golden fried fish steaks with spicy seasoning", price: 30, image: friedFish },
+  { id: "cow-skin", name: "Cow Skin (Ponmo) Sauce", desc: "Soft cow skin (ponmo) simmered in spicy peppered tomato sauce", price: 30, image: cowSkin },
+  { id: "cowleg-pepper-soup", name: "Cow Leg Pepper Soup", desc: "Tender cow leg in a rich, spicy pepper-soup broth with yam and herbs", price: 50, image: cowlegPepperSoup },
+  { id: "chicken-pepper-soup", name: "Chicken Pepper Soup", desc: "Aromatic peppery broth with tender chicken and traditional spices", price: 45, image: chickenPepperSoup },
+  { id: "moi-moi", name: "Moi Moi", desc: "Steamed bean pudding with peppers, onions and boiled egg", price: 20, image: moiMoi },
   { id: "ugali-nyamachoma", name: "Ugali / Nyamachoma / Kachumbari", desc: "East-African grilled meat with ugali and fresh kachumbari salad", price: 50, image: ugaliNyamachoma },
   { id: "amala", name: "Amala", desc: "Smooth yam-flour swallow — soft, earthy and perfect with any soup", price: 20, image: amala },
   { id: "semovita", name: "Semovita", desc: "Soft semolina swallow, smooth and fluffy — pairs with any Nigerian soup", price: 20, image: semovita },
