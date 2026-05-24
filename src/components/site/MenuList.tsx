@@ -1,7 +1,7 @@
 import { memo, useSyncExternalStore, useCallback } from "react";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus, Flame, Utensils, Leaf, Salad, IceCream, GlassWater } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { MENU, MENU_BY_CATEGORY, CATEGORY_ORDER, CATEGORY_META } from "@/lib/menu-items";
+import { MENU, MENU_BY_CATEGORY, CATEGORY_ORDER, CATEGORY_META, type MenuCategory } from "@/lib/menu-items";
 import { cart, type MenuItem } from "@/lib/cart";
 
 const FEATURED_IDS = [
