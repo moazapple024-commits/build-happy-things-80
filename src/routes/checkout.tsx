@@ -63,6 +63,10 @@ function CheckoutPage() {
       setError("Your cart is empty");
       return;
     }
+    if (method === "delivery" && address.trim().length < 5) {
+      setError("Please enter your delivery address");
+      return;
+    }
 
     const lineText = detailed
       .map((d) => `• ${d.name} x ${d.qty} = ${d.price * d.qty} QAR`)
@@ -79,7 +83,7 @@ function CheckoutPage() {
       "",
       `*Total: ${total} QAR*`,
       notes.trim() ? `\nNotes: ${notes.trim()}` : "",
-      method === "delivery" ? `\nDelivery address to be confirmed. Restaurant location: ${ADDRESS_EN}` : "",
+      method === "delivery" ? `\nDelivery address: ${address.trim()}` : "",
     ]
       .filter(Boolean)
       .join("\n");
