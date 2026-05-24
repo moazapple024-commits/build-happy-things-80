@@ -21,6 +21,15 @@ const FEATURED = FEATURED_IDS
   .map((id) => MENU.find((m) => m.id === id))
   .filter((m): m is MenuItem => Boolean(m));
 
+const CATEGORY_ICONS: Record<MenuCategory, React.ComponentType<{ className?: string }>> = {
+  mains: Flame,
+  rice: Utensils,
+  african: Leaf,
+  salads: Salad,
+  desserts: IceCream,
+  drinks: GlassWater,
+};
+
 function scrollToCategory(cat: string) {
   const el = document.getElementById(`cat-${cat}`);
   if (!el) return;
