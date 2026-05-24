@@ -151,7 +151,7 @@ const MenuRow = memo(function MenuRow({ it }: { it: MenuItem }) {
           )}
         </div>
       </div>
-    </li>
+    </motion.li>
   );
 });
 
