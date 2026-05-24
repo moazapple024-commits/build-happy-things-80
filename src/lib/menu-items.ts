@@ -158,3 +158,133 @@ export const MENU: MenuItem[] = [
   { id: "juices", name: "Fresh Juice", desc: "Natural juices and refreshing mocktails", price: 15, image: juices },
   { id: "coffee", name: "Coffee", desc: "Freshly brewed coffee with delicate latte art", price: 10, image: coffee },
 ];
+
+export type MenuCategory =
+  | "mains"
+  | "rice"
+  | "african"
+  | "salads"
+  | "desserts"
+  | "drinks";
+
+export const CATEGORY_ORDER: MenuCategory[] = [
+  "mains",
+  "rice",
+  "salads",
+  "desserts",
+  "drinks",
+  "african",
+];
+
+export const CATEGORY_META: Record<MenuCategory, { title: string; kicker: string; subtitle?: string }> = {
+  mains: { title: "Main Dishes & Grills", kicker: "Signature" },
+  rice: { title: "Rice & Signature Meals", kicker: "From the Kitchen" },
+  salads: { title: "Salads & Sides", kicker: "Fresh" },
+  desserts: { title: "Desserts", kicker: "Sweet Finish" },
+  drinks: { title: "Drinks", kicker: "Refreshments" },
+  african: { title: "African Specials", kicker: "Heritage", subtitle: "Traditional swallows, soups and beloved classics" },
+};
+
+const CATEGORY_BY_ID: Record<string, MenuCategory> = {
+  // Mains & grills
+  farrouj: "mains",
+  "chicken-bbq": "mains",
+  "chicken-kofta": "mains",
+  "shish-tawook": "mains",
+  "lamb-chop": "mains",
+  "lamb-kebab": "mains",
+  "lamb-kofta-plate": "mains",
+  "beef-burger-new": "mains",
+  burger: "mains",
+  "calamari-shrimp": "mains",
+  "tilapia-grill": "mains",
+  "grill-catfish": "mains",
+  "roasted-plantain-fish": "mains",
+  suya: "mains",
+  "fried-goat": "mains",
+  pizza: "mains",
+  lasagna: "mains",
+  "penne-alfredo": "mains",
+  "penne-arrabiata": "mains",
+  spaghetti: "mains",
+  "white-spaghetti": "mains",
+  noodles: "mains",
+
+  // Rice & signature
+  "majboos-lamb": "rice",
+  "chicken-biryani": "rice",
+  jollof: "rice",
+  "jollof-goat": "rice",
+  "fried-rice": "rice",
+  "fried-rice-chicken": "rice",
+  "native-rice": "rice",
+  "vermicelli-chicken": "rice",
+  shawarma: "rice",
+  sandwiches: "rice",
+  "meat-pie": "rice",
+  "small-chops": "rice",
+
+  // African specials
+  "ugali-nyamachoma": "african",
+  mukimo: "african",
+  "fufu-egusi": "african",
+  "egusi-beef-eba": "african",
+  "vegetable-garri-beef": "african",
+  "banga-gari": "african",
+  abacha: "african",
+  nkwobi: "african",
+  "goat-pepper-soup": "african",
+  "catfish-pepper-soup": "african",
+  "assorted-pepper-soup": "african",
+  "okra-soup": "african",
+  "vegetable-soup": "african",
+  "white-soup": "african",
+  "bitterleaf-soup": "african",
+  amala: "african",
+  semovita: "african",
+  "garri-eba": "african",
+  fufu: "african",
+  "pounded-yam": "african",
+  "agidi-eko": "african",
+  wheat: "african",
+  mandazi: "african",
+
+  // Salads & sides
+  "caesar-chicken": "salads",
+  tabbouleh: "salads",
+  fattoush: "salads",
+  "green-salad": "salads",
+  "3-beans-salad": "salads",
+  coleslaw: "salads",
+  "roasted-plantain": "salads",
+
+  // Desserts
+  tiramisu: "desserts",
+  "panna-cotta": "desserts",
+  "brownie-sundae": "desserts",
+  "date-cake": "desserts",
+  "creme-brulee": "desserts",
+  parfait: "desserts",
+  "garri-parfait": "desserts",
+  "fruits-salad": "desserts",
+
+  // Drinks
+  juices: "drinks",
+  coffee: "drinks",
+  "vanilla-milkshake": "drinks",
+  "zobo-drink": "drinks",
+  "strawberry-mojito": "drinks",
+};
+
+export function categoryOf(id: string): MenuCategory {
+  return CATEGORY_BY_ID[id] ?? "mains";
+}
+
+export const MENU_BY_CATEGORY: Record<MenuCategory, MenuItem[]> = CATEGORY_ORDER.reduce(
+  (acc, cat) => {
+    acc[cat] = MENU.filter((m) => categoryOf(m.id) === cat);
+    return acc;
+  },
+  {} as Record<MenuCategory, MenuItem[]>,
+);
+

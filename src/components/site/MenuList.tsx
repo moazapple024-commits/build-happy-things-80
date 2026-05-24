@@ -1,7 +1,7 @@
 import { memo, useSyncExternalStore, useCallback } from "react";
 import { Plus, Minus } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { MENU } from "@/lib/menu-items";
+import { MENU_BY_CATEGORY, CATEGORY_ORDER, CATEGORY_META } from "@/lib/menu-items";
 import { cart, type MenuItem } from "@/lib/cart";
 
 function useItemQty(id: string) {
@@ -94,11 +94,45 @@ export function MenuList() {
           </Reveal>
         </div>
 
-        <ul className="mt-6 flex flex-col gap-3">
-          {MENU.map((it) => (
-            <MenuRow key={it.id} it={it} />
-          ))}
-        </ul>
+        <div className="mt-10 flex flex-col gap-14">
+          {CATEGORY_ORDER.map((cat) => {
+            const items = MENU_BY_CATEGORY[cat];
+            if (!items?.length) return null;
+            const meta = CATEGORY_META[cat];
+            const isAfrican = cat === "african";
+            return (
+              <div key={cat} className={isAfrican ? "opacity-95" : ""}>
+                <Reveal>
+                  <div className="mb-5 text-center">
+                    <span className="text-[10px] tracking-[0.4em] text-gold sm:text-xs">
+                      {meta.kicker.toUpperCase()}
+                    </span>
+                    <h3
+                      className={`mt-2 font-display font-bold leading-tight ${
+                        isAfrican
+                          ? "text-xl sm:text-2xl"
+                          : "text-2xl sm:text-3xl"
+                      }`}
+                    >
+                      {meta.title}
+                    </h3>
+                    {meta.subtitle && (
+                      <p className="mt-1 text-xs text-muted-foreground sm:text-sm">
+                        {meta.subtitle}
+                      </p>
+                    )}
+                    <div className="gold-divider mx-auto mt-3 w-12" />
+                  </div>
+                </Reveal>
+                <ul className="flex flex-col gap-3">
+                  {items.map((it) => (
+                    <MenuRow key={it.id} it={it} />
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
