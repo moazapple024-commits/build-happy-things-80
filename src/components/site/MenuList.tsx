@@ -21,7 +21,7 @@ const FEATURED = FEATURED_IDS
   .map((id) => MENU.find((m) => m.id === id))
   .filter((m): m is MenuItem => Boolean(m));
 
-const CATEGORY_ICONS: Record<MenuCategory, React.ComponentType<{ className?: string }>> = {
+const CATEGORY_ICONS: Record<MenuCategory, typeof Flame> = {
   mains: Flame,
   rice: Utensils,
   african: Leaf,
