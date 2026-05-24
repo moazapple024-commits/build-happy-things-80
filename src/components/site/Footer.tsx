@@ -29,14 +29,45 @@ export function Footer() {
         <div>
           <div className="text-xs tracking-[0.3em] text-gold">CONTACT</div>
           <ul className="mt-5 space-y-3 text-sm text-foreground/80">
-            <li>+974 7444 4386</li>
+            <li>
+              <a href="tel:+97474444386" className="hover:text-gold transition-colors">
+                +974 7444 4386
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:tobizeintercontinental@gmail.com"
+                className="break-all hover:text-gold transition-colors"
+              >
+                tobizeintercontinental@gmail.com
+              </a>
+            </li>
             <li>Freej Kulaib, Doha, Qatar</li>
             <li className="flex gap-4 pt-2">
-              {["Instagram", "Facebook", "TikTok"].map((s) => (
-                <a key={s} href="#" className="hover:text-gold transition-colors">
-                  {s}
-                </a>
-              ))}
+              <a
+                href="https://www.facebook.com/share/18mZMQUUMq/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold transition-colors"
+              >
+                Facebook
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold transition-colors"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://www.tiktok.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold transition-colors"
+              >
+                TikTok
+              </a>
             </li>
           </ul>
         </div>
@@ -44,6 +75,14 @@ export function Footer() {
       <div className="gold-divider mx-auto mt-12 max-w-7xl" />
       <p className="mx-auto mt-6 max-w-7xl text-center text-xs tracking-[0.2em] text-muted-foreground">
         © {new Date().getFullYear()} TOBIZE INTERCONTINENTAL · DOHA
+      </p>
+      <p className="mx-auto mt-3 max-w-7xl text-center text-[10px] tracking-[0.15em] text-muted-foreground/70">
+        <a
+          href="tel:+963994929619"
+          className="transition-colors hover:text-gold"
+        >
+          Website developed by Moaz · +963 994929619
+        </a>
       </p>
     </footer>
   );
