@@ -280,9 +280,44 @@ export function categoryOf(id: string): MenuCategory {
   return CATEGORY_BY_ID[id] ?? "mains";
 }
 
+// Priority ordering for the "mains" category: premium dishes, grills, burgers first
+const MAINS_PRIORITY: string[] = [
+  "lamb-chop",
+  "lamb-kebab",
+  "lamb-kofta-plate",
+  "grill-catfish",
+  "tilapia-grill",
+  "calamari-shrimp",
+  "roasted-plantain-fish",
+  "chicken-bbq",
+  "shish-tawook",
+  "chicken-kofta",
+  "farrouj",
+  "fried-goat",
+  "suya",
+  "beef-burger-new",
+  "burger",
+  "pizza",
+  "lasagna",
+  "penne-alfredo",
+  "penne-arrabiata",
+  "spaghetti",
+  "white-spaghetti",
+  "noodles",
+];
+
+function sortMains(items: MenuItem[]): MenuItem[] {
+  const rank = (id: string) => {
+    const i = MAINS_PRIORITY.indexOf(id);
+    return i === -1 ? MAINS_PRIORITY.length : i;
+  };
+  return [...items].sort((a, b) => rank(a.id) - rank(b.id));
+}
+
 export const MENU_BY_CATEGORY: Record<MenuCategory, MenuItem[]> = CATEGORY_ORDER.reduce(
   (acc, cat) => {
-    acc[cat] = MENU.filter((m) => categoryOf(m.id) === cat);
+    const items = MENU.filter((m) => categoryOf(m.id) === cat);
+    acc[cat] = cat === "mains" ? sortMains(items) : items;
     return acc;
   },
   {} as Record<MenuCategory, MenuItem[]>,

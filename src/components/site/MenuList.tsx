@@ -1,7 +1,7 @@
 import { memo, useSyncExternalStore, useCallback } from "react";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus, Flame, Utensils, Leaf, Salad, IceCream, GlassWater } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { MENU, MENU_BY_CATEGORY, CATEGORY_ORDER, CATEGORY_META } from "@/lib/menu-items";
+import { MENU, MENU_BY_CATEGORY, CATEGORY_ORDER, CATEGORY_META, type MenuCategory } from "@/lib/menu-items";
 import { cart, type MenuItem } from "@/lib/cart";
 
 const FEATURED_IDS = [
@@ -20,6 +20,15 @@ const FEATURED_IDS = [
 const FEATURED = FEATURED_IDS
   .map((id) => MENU.find((m) => m.id === id))
   .filter((m): m is MenuItem => Boolean(m));
+
+const CATEGORY_ICONS: Record<MenuCategory, typeof Flame> = {
+  mains: Flame,
+  rice: Utensils,
+  african: Leaf,
+  salads: Salad,
+  desserts: IceCream,
+  drinks: GlassWater,
+};
 
 function scrollToCategory(cat: string) {
   const el = document.getElementById(`cat-${cat}`);
@@ -178,21 +187,32 @@ export function MenuList() {
           </div>
         </Reveal>
 
-        {/* Category quick-nav */}
+        {/* Category quick-nav — premium icon grid */}
         <Reveal delay={0.3}>
-          <div className="sticky top-2 z-20 mt-8 -mx-4 px-4 sm:-mx-6 sm:px-6">
-            <div className="flex gap-2 overflow-x-auto rounded-full border border-border/70 bg-background/90 p-1.5 shadow-deep backdrop-blur [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="mt-10">
+            <div className="mb-3 text-center">
+              <span className="text-[10px] tracking-[0.4em] text-gold sm:text-xs">
+                EXPLORE BY CATEGORY
+              </span>
+            </div>
+            <div className="grid grid-cols-3 gap-2 sm:grid-cols-6 sm:gap-3">
               {CATEGORY_ORDER.map((cat) => {
                 const items = MENU_BY_CATEGORY[cat];
                 if (!items?.length) return null;
+                const Icon = CATEGORY_ICONS[cat];
                 return (
                   <button
                     key={cat}
                     type="button"
                     onClick={() => scrollToCategory(cat)}
-                    className="flex-none touch-manipulation whitespace-nowrap rounded-full px-4 py-2 text-xs font-semibold text-foreground transition-colors hover:bg-gold/15 hover:text-gold active:scale-95 sm:text-sm"
+                    className="group flex touch-manipulation flex-col items-center justify-center gap-2 rounded-2xl border border-gold/30 bg-background/80 px-2 py-4 shadow-deep transition-all hover:-translate-y-0.5 hover:border-gold hover:bg-gold/10 active:scale-95"
                   >
-                    {CATEGORY_META[cat].title}
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-gold text-primary-foreground shadow-deep">
+                      <Icon className="h-5 w-5" />
+                    </span>
+                    <span className="text-center text-[11px] font-semibold leading-tight text-foreground group-hover:text-gold sm:text-xs">
+                      {CATEGORY_META[cat].title}
+                    </span>
                   </button>
                 );
               })}
