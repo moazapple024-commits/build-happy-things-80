@@ -130,7 +130,7 @@ export const MENU: MenuItem[] = [
   { id: "lamb-chop", name: "Lamb Chop", desc: "Grilled lamb chops served on a bed of fragrant yellow rice", price: 75, image: lambChop },
   { id: "lamb-kebab", name: "Lamb Kebab", desc: "Char-grilled lamb skewers with peppers, onions and basmati rice", price: 50, image: lambKebab },
   { id: "fufu-egusi", name: "Fufu / Egusi / Beef", desc: "Traditional fufu with rich egusi soup and tender beef", price: 45, image: fufuEgusi },
-  { id: "ugali-nyama", name: "Ugali / Nyama Choma / Kachumbari", desc: "East-African grilled meat with ugali and fresh kachumbari salad", price: 40, image: ugaliNyama },
+  
   { id: "fried-goat", name: "Fried Goat Meat", desc: "Crispy seasoned goat meat, slow-fried to perfection", price: 35, image: friedGoat },
   { id: "farrouj", name: "Grilled Farrouj", desc: "Golden chicken with our signature marinade, garlic & pickles", price: 35, image: farrouj },
   { id: "native-rice", name: "Native Rice", desc: "Authentic spiced native rice with smoked fish and herbs", price: 35, image: nativeRice },
