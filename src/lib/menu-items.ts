@@ -68,9 +68,25 @@ import garriParfait from "@/assets/meal-garri-parfait.jpg";
 import fruitsSalad from "@/assets/meal-fruits-salad.jpg";
 import coleslaw from "@/assets/meal-coleslaw.jpg";
 import roastedPlantain from "@/assets/meal-roasted-plantain.jpg";
+import amala from "@/assets/meal-amala.jpg";
+import semovita from "@/assets/meal-semovita.jpg";
+import garriEba from "@/assets/meal-garri-eba.jpg";
+import fufu from "@/assets/meal-fufu.jpg";
+import poundedYam from "@/assets/meal-pounded-yam.jpg";
+import agidi from "@/assets/meal-agidi.jpg";
+import wheat from "@/assets/meal-wheat.jpg";
+import ugaliNyamachoma from "@/assets/meal-ugali-nyamachoma.jpg";
 import type { MenuItem } from "./cart";
 
 export const MENU: MenuItem[] = [
+  { id: "ugali-nyamachoma", name: "Ugali / Nyamachoma / Kachumbari", desc: "East-African grilled meat with ugali and fresh kachumbari salad", price: 50, image: ugaliNyamachoma },
+  { id: "amala", name: "Amala", desc: "Smooth yam-flour swallow — soft, earthy and perfect with any soup", price: 20, image: amala },
+  { id: "semovita", name: "Semovita", desc: "Soft semolina swallow, smooth and fluffy — pairs with any Nigerian soup", price: 20, image: semovita },
+  { id: "garri-eba", name: "Garri (Eba)", desc: "Classic cassava eba swallow — firm, smooth and ready for any soup", price: 20, image: garriEba },
+  { id: "fufu", name: "Fufu", desc: "Soft cassava fufu swallow — light and stretchy, served with soup", price: 20, image: fufu },
+  { id: "pounded-yam", name: "Pounded Yam", desc: "Silky pounded yam swallow — smooth, stretchy and perfect with egusi or vegetable soup", price: 20, image: poundedYam },
+  { id: "agidi-eko", name: "Agidi / Eko", desc: "Firm corn-starch pudding wrapped in leaves — pairs with stew or pepper soup", price: 20, image: agidi },
+  { id: "wheat", name: "Wheat Swallow", desc: "Wholesome wheat swallow — smooth and filling, great with any soup", price: 15, image: wheat },
   { id: "small-chops", name: "Small Chops Platter", desc: "Party platter of puff-puff, suya, samosa, spring rolls, chicken and plantain", price: 500, image: smallChops },
   { id: "fruits-salad", name: "Fruits Salad Platter", desc: "Generous platter of fresh seasonal fruits — watermelon, pineapple, grapes and more", price: 150, image: fruitsSalad },
   { id: "vegetable-garri-beef", name: "Vegetable / Garri / Beef", desc: "Sautéed Nigerian vegetable with tender beef, served with eba (garri)", price: 60, image: vegetableGarriBeef },
@@ -114,7 +130,7 @@ export const MENU: MenuItem[] = [
   { id: "lamb-chop", name: "Lamb Chop", desc: "Grilled lamb chops served on a bed of fragrant yellow rice", price: 75, image: lambChop },
   { id: "lamb-kebab", name: "Lamb Kebab", desc: "Char-grilled lamb skewers with peppers, onions and basmati rice", price: 50, image: lambKebab },
   { id: "fufu-egusi", name: "Fufu / Egusi / Beef", desc: "Traditional fufu with rich egusi soup and tender beef", price: 45, image: fufuEgusi },
-  { id: "ugali-nyama", name: "Ugali / Nyama Choma / Kachumbari", desc: "East-African grilled meat with ugali and fresh kachumbari salad", price: 40, image: ugaliNyama },
+  
   { id: "fried-goat", name: "Fried Goat Meat", desc: "Crispy seasoned goat meat, slow-fried to perfection", price: 35, image: friedGoat },
   { id: "farrouj", name: "Grilled Farrouj", desc: "Golden chicken with our signature marinade, garlic & pickles", price: 35, image: farrouj },
   { id: "native-rice", name: "Native Rice", desc: "Authentic spiced native rice with smoked fish and herbs", price: 35, image: nativeRice },
