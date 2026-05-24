@@ -260,9 +260,16 @@ const CATEGORY_BY_ID: Record<string, MenuCategory> = {
   sandwiches: "rice",
   "meat-pie": "rice",
   "small-chops": "rice",
+  "coconut-rice": "rice",
+  "white-rice-beans-plantain": "rice",
 
   // African specials
   "ugali-nyamachoma": "african",
+  "ugali-beef-stew": "african",
+  "githeri-ugali": "african",
+  "yam-porridge": "african",
+  "asun-goat": "african",
+  isiewu: "african",
   "cow-skin": "african",
   "cowleg-pepper-soup": "african",
   "chicken-pepper-soup": "african",
