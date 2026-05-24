@@ -1,11 +1,20 @@
 import { useSyncExternalStore } from "react";
 
+export type MenuCategory =
+  | "mains"
+  | "rice"
+  | "african"
+  | "salads"
+  | "desserts"
+  | "drinks";
+
 export type MenuItem = {
   id: string;
   name: string;
   desc: string;
   price: number; // QAR
   image: string;
+  category: MenuCategory;
 };
 
 export type CartLine = { id: string; qty: number };
