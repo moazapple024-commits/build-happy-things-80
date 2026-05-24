@@ -68,6 +68,14 @@ import garriParfait from "@/assets/meal-garri-parfait.jpg";
 import fruitsSalad from "@/assets/meal-fruits-salad.jpg";
 import coleslaw from "@/assets/meal-coleslaw.jpg";
 import roastedPlantain from "@/assets/meal-roasted-plantain.jpg";
+import amala from "@/assets/meal-amala.jpg";
+import semovita from "@/assets/meal-semovita.jpg";
+import garriEba from "@/assets/meal-garri-eba.jpg";
+import fufu from "@/assets/meal-fufu.jpg";
+import poundedYam from "@/assets/meal-pounded-yam.jpg";
+import agidi from "@/assets/meal-agidi.jpg";
+import wheat from "@/assets/meal-wheat.jpg";
+import ugaliNyamachoma from "@/assets/meal-ugali-nyamachoma.jpg";
 import type { MenuItem } from "./cart";
 
 export const MENU: MenuItem[] = [
