@@ -61,7 +61,7 @@ export function Footer() {
                 Instagram
               </a>
               <a
-                href="https://www.tiktok.com/@official_tobize"
+                href="https://www.tiktok.com/@tobize.interconti"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gold transition-colors"
