@@ -11,18 +11,20 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Tobize Intercontinental Restaurant · Doha" },
+      { title: "Tobize Intercontinental Restaurant · Doha, Qatar" },
       {
         name: "description",
         content:
-          "Tobize Intercontinental Restaurant in Doha — order farrouj, sandwiches, desserts and fresh juices directly via WhatsApp.",
+          "Tobize Intercontinental Restaurant in Doha — order farrouj, sandwiches, desserts and fresh juices directly via WhatsApp. Open daily 9am–1am.",
       },
       { property: "og:title", content: "Tobize Intercontinental Restaurant · Doha" },
       {
         property: "og:description",
         content: "Order your favorite food from Tobize Doha easily via WhatsApp.",
       },
+      { property: "og:url", content: "https://tobize.com/" },
     ],
+    links: [{ rel: "canonical", href: "https://tobize.com/" }],
   }),
 });
 
