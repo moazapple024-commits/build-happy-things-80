@@ -187,15 +187,15 @@ export function MenuList() {
           </div>
         </Reveal>
 
-        {/* Category quick-nav — premium icon grid */}
+        {/* Category quick-nav — compact pills */}
         <Reveal delay={0.3}>
-          <div className="mt-10">
+          <div className="mt-8">
             <div className="mb-3 text-center">
-              <span className="text-[10px] tracking-[0.4em] text-gold sm:text-xs">
+              <span className="text-[10px] tracking-[0.4em] text-gold">
                 EXPLORE BY CATEGORY
               </span>
             </div>
-            <div className="grid grid-cols-3 gap-2 sm:grid-cols-6 sm:gap-3">
+            <div className="flex flex-wrap justify-center gap-2">
               {CATEGORY_ORDER.map((cat) => {
                 const items = MENU_BY_CATEGORY[cat];
                 if (!items?.length) return null;
@@ -205,14 +205,10 @@ export function MenuList() {
                     key={cat}
                     type="button"
                     onClick={() => scrollToCategory(cat)}
-                    className="group flex touch-manipulation flex-col items-center justify-center gap-2 rounded-2xl border border-gold/30 bg-background/80 px-2 py-4 shadow-deep transition-all hover:-translate-y-0.5 hover:border-gold hover:bg-gold/10 active:scale-95"
+                    className="group inline-flex touch-manipulation items-center gap-1.5 rounded-full border border-gold/40 bg-background/80 px-3 py-1.5 text-[11px] font-semibold text-foreground shadow-sm transition-all hover:border-gold hover:bg-gold/10 hover:text-gold active:scale-95"
                   >
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-gold text-primary-foreground shadow-deep">
-                      <Icon className="h-5 w-5" />
-                    </span>
-                    <span className="text-center text-[11px] font-semibold leading-tight text-foreground group-hover:text-gold sm:text-xs">
-                      {CATEGORY_META[cat].title}
-                    </span>
+                    <Icon className="h-3.5 w-3.5 text-gold" />
+                    <span className="whitespace-nowrap">{CATEGORY_META[cat].title}</span>
                   </button>
                 );
               })}
