@@ -54,12 +54,8 @@ export function Reserve() {
               <div className="text-xs tracking-[0.3em] text-gold">OPENING HOURS</div>
               <ul className="mt-5 space-y-2 text-sm text-foreground/90">
                 <li className="flex justify-between">
-                  <span>Saturday – Thursday</span>
-                  <span className="text-muted-foreground">12:00 — 02:00</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Friday</span>
-                  <span className="text-muted-foreground">14:00 — 02:00</span>
+                  <span>Daily</span>
+                  <span className="text-muted-foreground">9:00 AM — 1:00 AM</span>
                 </li>
               </ul>
             </div>
