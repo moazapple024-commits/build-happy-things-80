@@ -91,7 +91,13 @@ const MenuRow = memo(function MenuRow({ it }: { it: MenuItem }) {
   const onDec = useCallback(() => cart.dec(it.id), [it.id]);
 
   return (
-    <li className="flex items-stretch gap-3 rounded-lg border border-border/70 bg-background p-3 shadow-deep transition-colors hover:border-gold/50">
+    <motion.li
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2, margin: "0px 0px -60px 0px" }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className="flex items-stretch gap-3 rounded-lg border border-border/70 bg-background p-3 shadow-deep transition-colors hover:border-gold/50"
+    >
       <img
         src={it.image}
         alt={it.name}
