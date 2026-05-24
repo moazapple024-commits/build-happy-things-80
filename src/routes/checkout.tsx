@@ -28,6 +28,7 @@ function CheckoutPage() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [method, setMethod] = useState<Delivery>("delivery");
+  const [address, setAddress] = useState("");
   const [notes, setNotes] = useState("");
   const [error, setError] = useState<string | null>(null);
 
@@ -62,6 +63,10 @@ function CheckoutPage() {
       setError("Your cart is empty");
       return;
     }
+    if (method === "delivery" && address.trim().length < 5) {
+      setError("Please enter your delivery address");
+      return;
+    }
 
     const lineText = detailed
       .map((d) => `• ${d.name} x ${d.qty} = ${d.price * d.qty} QAR`)
@@ -78,7 +83,7 @@ function CheckoutPage() {
       "",
       `*Total: ${total} QAR*`,
       notes.trim() ? `\nNotes: ${notes.trim()}` : "",
-      method === "delivery" ? `\nDelivery address to be confirmed. Restaurant location: ${ADDRESS_EN}` : "",
+      method === "delivery" ? `\nDelivery address: ${address.trim()}` : "",
     ]
       .filter(Boolean)
       .join("\n");
@@ -189,6 +194,25 @@ function CheckoutPage() {
               <option value="dinein">Dine-in</option>
             </select>
           </Field>
+          <div
+            className={`grid overflow-hidden transition-all duration-500 ease-out ${
+              method === "delivery"
+                ? "grid-rows-[1fr] opacity-100"
+                : "grid-rows-[0fr] opacity-0"
+            }`}
+          >
+            <div className="min-h-0">
+              <Field label="Delivery address">
+                <textarea
+                  value={address}
+                  onChange={(e) => setAddress(e.target.value.slice(0, 250))}
+                  rows={2}
+                  className="w-full rounded-md border border-gold/40 bg-background px-3 py-3 outline-none focus:border-gold"
+                  placeholder="Building, street, area, landmark..."
+                />
+              </Field>
+            </div>
+          </div>
           <Field label="Notes (optional)">
             <textarea
               value={notes}
