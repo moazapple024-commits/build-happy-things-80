@@ -81,7 +81,7 @@ export function Footer() {
           Tobize Intercontinental
         </span>
         <span>
-          Website developed by{" "}
+          developed by{" "}
           <a
             href="https://wa.me/963994929619"
             target="_blank"
