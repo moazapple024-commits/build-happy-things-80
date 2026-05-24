@@ -322,6 +322,9 @@ const CATEGORY_BY_ID: Record<string, MenuCategory> = {
   "vanilla-milkshake": "drinks",
   "zobo-drink": "drinks",
   "strawberry-mojito": "drinks",
+  "sprite-can": "drinks",
+  "fanta-can": "drinks",
+  "coke-can": "drinks",
 };
 
 export function categoryOf(id: string): MenuCategory {
