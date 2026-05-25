@@ -160,7 +160,7 @@ export const MENU: MenuItem[] = [
   { id: "lamb-kofta-plate", name: "Lamb Kofta Plate", desc: "Spiced lamb kofta meatballs with saffron rice, hummus, salad and warm pita", price: 60, image: lambKofta },
   { id: "okra-soup", name: "Okra Soup", desc: "Rich West-African okra soup with assorted meat and seafood", price: 50, image: okraSoup },
   { id: "calamari-shrimp", name: "Calamari & Shrimp", desc: "Crispy fried calamari and shrimp with marinara dipping sauce", price: 35, image: calamariShrimp },
-  { id: "pizza", name: "Chicken Pizza", desc: "Wood-fired pizza with chicken, peppers, onions and mozzarella", price: 30, image: pizza },
+  { id: "pizza", name: "Pizza", desc: "Wood-fired pizza with peppers, onions and mozzarella", price: 30, image: pizza },
   { id: "lasagna", name: "Beef Lasagna", desc: "Classic layered lasagna with rich meat ragu, béchamel and mozzarella", price: 30, image: lasagna },
   { id: "penne-alfredo", name: "Penne Alfredo", desc: "Penne pasta in a creamy parmesan alfredo sauce with parsley", price: 30, image: penneAlfredo },
   { id: "beef-burger-new", name: "Classic Beef Burger", desc: "Grilled beef patty with bacon, cheddar, lettuce and pickles in a brioche bun", price: 30, image: beefBurgerNew },
