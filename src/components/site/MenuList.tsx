@@ -1,7 +1,8 @@
-import { memo, useSyncExternalStore, useCallback } from "react";
+import { memo, useSyncExternalStore, useCallback, useMemo } from "react";
 import { Plus, Minus, Flame, Utensils, Leaf, Salad, IceCream, GlassWater } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { MENU, MENU_BY_CATEGORY, CATEGORY_ORDER, CATEGORY_META, type MenuCategory } from "@/lib/menu-items";
+import { CATEGORY_ORDER, CATEGORY_META, type MenuCategory } from "@/lib/menu-items";
+import { useMenuData } from "@/lib/menu-store";
 import { cart, type MenuItem } from "@/lib/cart";
 
 const FEATURED_IDS = [
@@ -17,9 +18,6 @@ const FEATURED_IDS = [
   "shish-tawook",
 ];
 
-const FEATURED = FEATURED_IDS
-  .map((id) => MENU.find((m) => m.id === id))
-  .filter((m): m is MenuItem => Boolean(m));
 
 const NO_QTY = 0;
 
@@ -151,6 +149,16 @@ const MenuRow = memo(function MenuRow({ it }: { it: MenuItem }) {
 });
 
 export function MenuList() {
+
+  const { menu, byCategory } = useMenuData();
+  const featured = useMemo(
+    () =>
+      FEATURED_IDS.map((id) => menu.find((m) => m.id === id)).filter(
+        (m): m is MenuItem => Boolean(m),
+      ),
+    [menu],
+  );
+
   return (
     <section id="menu" className="relative bg-card px-4 pt-16 pb-40 sm:px-6 md:py-28">
       <div className="mx-auto max-w-3xl">
@@ -180,7 +188,7 @@ export function MenuList() {
               </span>
             </div>
             <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:-mx-6 sm:px-6">
-              {FEATURED.map((it) => (
+              {featured.map((it) => (
                 <div key={it.id} className="snap-start">
                   <FeaturedCard it={it} />
                 </div>
@@ -199,7 +207,7 @@ export function MenuList() {
             </div>
             <div className="flex flex-wrap justify-center gap-2">
               {CATEGORY_ORDER.map((cat) => {
-                const items = MENU_BY_CATEGORY[cat];
+                const items = byCategory[cat];
                 if (!items?.length) return null;
                 const Icon = CATEGORY_ICONS[cat];
                 return (
@@ -222,7 +230,7 @@ export function MenuList() {
 
         <div className="mt-10 flex flex-col gap-14">
           {CATEGORY_ORDER.map((cat) => {
-            const items = MENU_BY_CATEGORY[cat];
+            const items = byCategory[cat];
             if (!items?.length) return null;
             const meta = CATEGORY_META[cat];
             const isAfrican = cat === "african";

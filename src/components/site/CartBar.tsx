@@ -1,12 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { ShoppingBag } from "lucide-react";
 import { useCart, cartCount, cartTotal } from "@/lib/cart";
-import { MENU } from "@/lib/menu-items";
+import { useMenu } from "@/lib/menu-store";
 
 export function CartBar() {
   const lines = useCart();
+  const menu = useMenu();
   const count = cartCount(lines);
-  const total = cartTotal(lines, MENU);
+  const total = cartTotal(lines, menu);
   if (count === 0) return null;
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 px-3 pb-3 pt-2">
