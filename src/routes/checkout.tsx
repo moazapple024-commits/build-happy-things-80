@@ -33,17 +33,19 @@ function CheckoutPage() {
   const [notes, setNotes] = useState("");
   const [error, setError] = useState<string | null>(null);
 
+  const menu = useMenu();
   const detailed = useMemo(
     () =>
       lines
         .map((l) => {
-          const it = MENU.find((m) => m.id === l.id);
+          const it = menu.find((m) => m.id === l.id);
           return it ? { ...it, qty: l.qty } : null;
         })
-        .filter(Boolean) as (typeof MENU[number] & { qty: number })[],
-    [lines],
+        .filter(Boolean) as (MenuItem & { qty: number })[],
+    [lines, menu],
   );
-  const total = cartTotal(lines, MENU);
+  const total = cartTotal(lines, menu);
+
 
   function validatePhone(p: string) {
     const v = p.trim().replace(/\s+/g, "");
