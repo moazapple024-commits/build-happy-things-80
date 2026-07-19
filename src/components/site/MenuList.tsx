@@ -188,7 +188,7 @@ export function MenuList() {
               </span>
             </div>
             <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:-mx-6 sm:px-6">
-              {FEATURED.map((it) => (
+              {featured.map((it) => (
                 <div key={it.id} className="snap-start">
                   <FeaturedCard it={it} />
                 </div>
@@ -207,7 +207,7 @@ export function MenuList() {
             </div>
             <div className="flex flex-wrap justify-center gap-2">
               {CATEGORY_ORDER.map((cat) => {
-                const items = MENU_BY_CATEGORY[cat];
+                const items = byCategory[cat];
                 if (!items?.length) return null;
                 const Icon = CATEGORY_ICONS[cat];
                 return (
@@ -230,7 +230,7 @@ export function MenuList() {
 
         <div className="mt-10 flex flex-col gap-14">
           {CATEGORY_ORDER.map((cat) => {
-            const items = MENU_BY_CATEGORY[cat];
+            const items = byCategory[cat];
             if (!items?.length) return null;
             const meta = CATEGORY_META[cat];
             const isAfrican = cat === "african";
