@@ -1,4 +1,8 @@
+import { Link } from "@tanstack/react-router";
+import { Settings } from "lucide-react";
+
 export function Footer() {
+
   return (
     <footer className="border-t border-border bg-background px-6 py-14">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
