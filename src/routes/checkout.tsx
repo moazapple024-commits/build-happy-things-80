@@ -2,7 +2,8 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { ArrowLeft, Minus, Plus, Trash2 } from "lucide-react";
 import { cart, useCart, cartTotal } from "@/lib/cart";
-import { MENU } from "@/lib/menu-items";
+import { useMenu } from "@/lib/menu-store";
+import type { MenuItem } from "@/lib/cart";
 import { ADDRESS_EN } from "@/lib/contact";
 
 export const Route = createFileRoute("/checkout")({
