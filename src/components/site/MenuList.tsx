@@ -1,7 +1,8 @@
-import { memo, useSyncExternalStore, useCallback } from "react";
+import { memo, useSyncExternalStore, useCallback, useMemo } from "react";
 import { Plus, Minus, Flame, Utensils, Leaf, Salad, IceCream, GlassWater } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { MENU, MENU_BY_CATEGORY, CATEGORY_ORDER, CATEGORY_META, type MenuCategory } from "@/lib/menu-items";
+import { CATEGORY_ORDER, CATEGORY_META, type MenuCategory } from "@/lib/menu-items";
+import { useMenuData } from "@/lib/menu-store";
 import { cart, type MenuItem } from "@/lib/cart";
 
 const FEATURED_IDS = [
@@ -17,9 +18,6 @@ const FEATURED_IDS = [
   "shish-tawook",
 ];
 
-const FEATURED = FEATURED_IDS
-  .map((id) => MENU.find((m) => m.id === id))
-  .filter((m): m is MenuItem => Boolean(m));
 
 const NO_QTY = 0;
 
