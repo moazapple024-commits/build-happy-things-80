@@ -146,7 +146,10 @@ const MenuRow = memo(function MenuRow({ it }: { it: MenuItem }) {
       </div>
     </li>
   );
+});
+
 export function MenuList() {
+
   const { menu, byCategory } = useMenuData();
   const featured = useMemo(
     () =>
