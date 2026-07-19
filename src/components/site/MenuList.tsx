@@ -146,9 +146,16 @@ const MenuRow = memo(function MenuRow({ it }: { it: MenuItem }) {
       </div>
     </li>
   );
-});
-
 export function MenuList() {
+  const { menu, byCategory } = useMenuData();
+  const featured = useMemo(
+    () =>
+      FEATURED_IDS.map((id) => menu.find((m) => m.id === id)).filter(
+        (m): m is MenuItem => Boolean(m),
+      ),
+    [menu],
+  );
+
   return (
     <section id="menu" className="relative bg-card px-4 pt-16 pb-40 sm:px-6 md:py-28">
       <div className="mx-auto max-w-3xl">
