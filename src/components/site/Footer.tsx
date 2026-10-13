@@ -96,13 +96,13 @@ export function Footer() {
           </a>
         </span>
       </p>
-      <div className="mx-auto mt-4 flex max-w-7xl justify-center">
+      <div className="mx-auto mt-6 flex max-w-7xl justify-center">
         <Link
           to="/admin"
           aria-label="Admin"
-          className="inline-flex items-center gap-1.5 rounded-full border border-border/60 px-3 py-1 text-[10px] tracking-widest text-muted-foreground/60 transition-colors hover:border-gold/60 hover:text-gold"
+          className="inline-flex items-center gap-2 rounded-full border border-gold/50 px-5 py-2 text-xs font-semibold tracking-widest text-gold transition-colors hover:bg-gold/10 active:scale-95"
         >
-          <Settings className="h-3 w-3" /> ADMIN
+          <Settings className="h-4 w-4" /> ADMIN
         </Link>
       </div>
     </footer>
